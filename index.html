@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+a:link    {color:green; background-color:transparent; text-decoration:none}
+a:visited {color:green; background-color:transparent; text-decoration:none}
+a:hover   {color:white; background-color:transparent; text-decoration:underline}
+a:active  {color:white; background-color:transparent; text-decoration:underline}
+
+h1, h2, p, a
+{
+	font-family:courier;
+}
+
+button
+{
+	padding:10px;
+	font-family:courier;
+}
+
+</style>
+
+
+
+</head>
+<body style="background-color:black">
+<div style="width:70%; margin:0px auto; padding:20px;" id="window">
+<div style="width:50%; margin:0px auto; border:5px solid; text-align:center; padding:10px;">
+<h1 style="text-align:center; font-size:50px">ORBITAL DEFENCE FORCE</h1>
+<h2 style="text-align:center;">HURRY RECRUIT, SIGN IN! (HUMANITY DEPENDS ON IT...)</h1>
+<form action="http://arcadiadamiano.co/login.php" method="post">
+<p>NAME:</p>
+<input id="input" style="background-color:black; font-family:courier" type="text" name="user" id="user"/><br/><br/>
+<p>SECURITY CODE:</p>
+<input id="input1" style="background-color:black; font-family:courier" type="password" name="password" id="password"/><br/><br/>
+<input style="padding:10px; font-family:courier;" type="submit" id ="submit" name="submit" value="SIGN IN"/>
+<br/>
+<br/>
+</form>
+
+<a href="create.html" target="_self"> <button id="button" > *NEW RECRUITS*! </button> </a>
+</div>
+</div>
+
+<script>
+
+var requestAnimationFrame = window.requestAnimationFrame || 
+                            window.mozRequestAnimationFrame || 
+                            window.webkitRequestAnimationFrame || 
+                            window.msRequestAnimationFrame;
+
+var delay = 0;
+ 
+function blink() 
+{
+    delay++;
+	
+	document.body.style.color = "black";
+	document.getElementById('submit').style.backgroundColor = "black";
+	document.getElementById('button').style.backgroundColor = "black";
+	document.getElementById('input').style.color = "black";
+	document.getElementById('input1').style.color = "black";
+     
+    if (delay > 1.05) {
+        
+		changeColor();
+        delay = 0;
+    }
+ 
+    requestAnimationFrame(blink);
+}
+
+blink();
+
+function changeColor()
+{
+  document.body.style.color = "#36FB1A";
+  document.getElementById('submit').style.backgroundColor = "#36FB1A";
+  document.getElementById('button').style.backgroundColor = "#36FB1A";
+  document.getElementById('input').style.color = "#36FB1A";
+  document.getElementById('input1').style.color = "#36FB1A";
+}        
+</script>
+</body>
+</html>
